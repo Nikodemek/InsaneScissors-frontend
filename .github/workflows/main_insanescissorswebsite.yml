@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '18.x'
+          
+      - name: Update Npm
+        run: npm install -g npm@latest
 
       - name: npm install, build, and test
         run: |
