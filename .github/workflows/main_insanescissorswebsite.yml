@@ -51,6 +51,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node-app
+          
+      - name: Unzip artifacts for Deployment
+        run: unzip release.zip
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -59,4 +62,4 @@ jobs:
           app-name: 'InsaneScissorsWebsite'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B1BC4BEF549547688A3F5B62396C2FB4 }}
-          package: release.zip
+          package: .
