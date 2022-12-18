@@ -53,6 +53,9 @@ jobs:
           
       - name: Unzip artifact for deployment
         run: unzip release.zip
+        
+      - name: Update Npm
+        run: npm install -g npm@latest
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
