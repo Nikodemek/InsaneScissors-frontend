@@ -22,8 +22,8 @@ jobs:
           node-version: '18.x'
       
       - name: Update npm package
-        if: (npm version | ConvertFrom-Json).npm != '9.2.0'
-        run: npm install -g npm@latest
+        run: |
+          npm install -g npm@latest
 
       - name: npm install, build, and test
         run: |
