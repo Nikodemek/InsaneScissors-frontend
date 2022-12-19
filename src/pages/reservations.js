@@ -22,11 +22,11 @@ const ReservationsPage = () => {
     <>
       <div>ReservationsPage</div>
       <div>
-        {/* <ul>
+        <ul>
           {posts.map((post) => (
             <li key={post.id}>{post.name}</li>
           ))}
-        </ul> */}
+        </ul>
         <p>{posts[0]?.name}</p>
       </div>
     </>
